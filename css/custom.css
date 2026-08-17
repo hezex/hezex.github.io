@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css");
+
 /* 仅当 Banner 图片包含 2.png 时，调整垂直位置 */
 #banner[style*="2.png"] {
   background-position: center 20% !important; /* 20% 偏上，可根据效果微调（如 15%、25%、top） */

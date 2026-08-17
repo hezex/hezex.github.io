@@ -449,15 +449,15 @@ mjx-container[display="true"] + br {
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/08/14/UVA1625/" target="_self">
-          UVA1625 【颜色的长度 Color Length】
+        <a href="/2026/08/18/CF2254F/" target="_self">
+          CF2254 Whiplash
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/14/UVA1625/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/08/18/CF2254F/" target="_self">
         <div>
-          第一篇题解就是这么蓝的题。 大致看了一下，好像没什么题解和我的思路一样，就发一篇。 DP 四要素状态设计 记录第一个序列合并到 ，第二个序列合并到  时的 ，此处“合并”指考虑前几个颜色加入到答案序列中。 转移方程这里采用刷表法： dp[i+1][j]=\min\{dp[i][j]+exi[i+1][j],dp[i+1][j]\}dp[i][j+1]=\min\{dp[i][j]+exi[i][j
+          题面。 复健遇到了挺好一题！其中的偶数 nnn 细节更是让我直呼“Aha”。 整场比赛几乎都是在玩数列 aaa、bbb 之间在某些操作下的互化。 题意翻译  给定长度为偶数 nnn 的数列 aaa 和 bbb，定义操作选择下标 iii，将数列 aaa 中除了 aia_iai​ 以外的任意一个元素 aja_jaj​ 都变为 ai⊕aja_i\oplus a_jai​⊕aj​，求是否存在在一系列操作把
         </div>
       </a>
 
@@ -465,8 +465,8 @@ mjx-container[display="true"] + br {
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-08-14 15:31" pubdate>
-              2023-08-14
+            <time datetime="2026-08-18 01:49" pubdate>
+              2026-08-18
             </time>
           </div>
         
@@ -496,9 +496,592 @@ mjx-container[display="true"] + br {
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/UVA/">#UVA</a>
+              <a href="/tags/Codeforces/">#Codeforces</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+              <a href="/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">#基础算法</a>
+            
+              <a href="/tags/ad-hoc/">#ad-hoc</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/07/07/Hentai%20TDMGCC/" target="_self">
+          调教 MinGW 使之成为雌小鬼
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/07/07/Hentai%20TDMGCC/" target="_self">
+        <div>
+          杂~鱼~ MinGW 怎么可能有人家 Cygmin 这么可爱嘛♡。 骗你的啦~这么容易就上当的杂鱼本小姐还是第一次见呢♡。本是 gcc 同根生的 MinGW 在得当的调教下其实也是可以变可爱的喵~ 杂鱼~不会连在哪儿下该项目的对应的语言包和 MinGW 都不知道吧~ 哎？你问我为什么用 TDM_GCC 版本编译的 MinGW？杂鱼好笨呀~才……才不会是因为主
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-07-07 12:30" pubdate>
+              2026-07-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/C/">#C++</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/11/25/AT_cf_2015/" target="_self">
+          AT_cf_2015_morning_hard_h ありんこ
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/11/25/AT_cf_2015/" target="_self">
+        <div>
+          最小值最大确实是二分。一般是想二分 + 贪心。但是这道题套的是 DP。不能直接 DP 的原因是，它是一个 2D1D 的转移，然而代价函数长这样： t(i,j)=xi−xjvj−vit(i,j)=\frac{x_i-x_j}{v_j-v_i} t(i,j)=vj​−vi​xi​−xj​​ 这个东西笔者已经替你们思考了四个半小时了，它没有单调性、限制后的 1D 问题不是凸包、不满足四边形不等式。妥妥的
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-11-25 10:36" pubdate>
+              2024-11-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/AtCoder/">#AtCoder</a>
+            
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/21/P11218/" target="_self">
+          P11218 【MX-S4-T2】「yyOI R2」youyou 不喜欢夏天
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/21/P11218/" target="_self">
+        <div>
+          小小 DP 加类贪心，场上想到了正确思路，但是以为贪心是假的，不敢写，寄了呜呜呜。 题面。 O(nm)\mathcal O(nm)O(nm) 做法 这一挡引导考虑 DP。考虑设计 fi,j,cf_{i,j,c}fi,j,c​：  c=0c=0c=0 时，只选上侧方格； c=1c=1c=1 时，只选下侧方格； c=2c=2c=2 时，两格都选。  iii 为考虑前 iii 列，jjj 为已经翻转 j
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-21 10:55" pubdate>
+              2024-10-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
+            
+              <a href="/tags/%E6%B4%9B%E8%B0%B7/">#洛谷</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/20/P11217/" target="_self">
+          P11217 【MX-S4-T1】「yyOI R2」youyou 的垃圾桶
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/20/P11217/" target="_self">
+        <div>
+          魔怔板子题（？）。但是只过了板子题，废物如我。 题面。 称一轮为 youyou 被从 1∼n1\sim n1∼n 的所有垃圾桶攻击一遍，所有攻击显然由若干轮和最后从 111 开始的前缀垃圾桶的攻击组成。先考虑确定轮数。记第 111 轮总共造成 s=∑i=1nais=\sum^n_{i=1}a_is=∑i=1n​ai​ 的伤害，则前 ttt 轮造成的伤害： ∑i=1t2is=(2t+1−1)s\su
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-20 18:51" pubdate>
+              2024-10-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">#基础算法</a>
+            
+              <a href="/tags/%E6%B4%9B%E8%B0%B7/">#洛谷</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/16/P11188/" target="_self">
+          P11188 「KDOI-10」商店砍价
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/16/P11188/" target="_self">
+        <div>
+          题面。 个人感觉到不了绿。 场上唐诗了，先试图贪心，未果。 注意到了当某一 vvv 比较大的时候可能会出现“我们删数越多，就应该删数越少”的矛盾，故考虑 dp。 当数字本身超过逐一删去其价值总和之时，就没有执行操作 2 的必要。也就意味着需要将原数删至只剩 666 位，我场上写了删至 131313 位。正难则反，考虑只保留 666 位。 按照常规的状态设计，记 fi,jf_{i,j}fi,j​ 为
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-16 21:30" pubdate>
+              2024-10-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
+            
+              <a href="/tags/%E6%B4%9B%E8%B0%B7/">#洛谷</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/16/%E5%AE%9D%E5%85%B8/" target="_self">
+          杂题大典
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/16/%E5%AE%9D%E5%85%B8/" target="_self">
+        <div>
+          P4168 [Violet] 蒲公英 这里使用一个前缀桶 bi,jb_{i,j}bi,j​ 为前 iii 个块的桶。 然后利用这个桶计算 fi,jf_{i,j}fi,j​ 为块 iii 和块 jjj 之间的众数。 每次合并散块的时候把散块内的数计入桶内比较即可。此操作只取散块内有的数，故时间复杂度也是 O(nn)\mathcal{O}(n\sqrt{n})O(nn​)。 这道题教会了我们什么：
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-16 18:34" pubdate>
+              2024-10-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
+            
+              <a href="/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">#基础算法</a>
+            
+              <a href="/tags/ad-hoc/">#ad-hoc</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>
+            
+              <a href="/tags/%E6%95%B0%E8%AE%BA/">#数论</a>
+            
+              <a href="/tags/%E6%A0%91%E8%AE%BA/">#树论</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">#图论</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/09/23/P11078/" target="_self">
+          P11078 「FSLOI Round I」迷雾
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/09/23/P11078/" target="_self">
+        <div>
+          经典套路，难度不高。目前最优解。  你猜题目为什么声明所有操作 kkk 是一样的？  移动不用说，每次维护变量，记得取 min⁡\minmin 和 max⁡\maxmax 防止跑出边界。问题在于当被 X 代表的迷雾迷之后它会影响后续的走法。 注意到方向的映射无非两种：  {U,D,R,L}→{U,D,R,L}\{U,D,R,L\}\rightarrow\{U,D,R,L\}{U,D,R,L}→{U
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-09-23 13:32" pubdate>
+              2024-09-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">#基础算法</a>
+            
+              <a href="/tags/%E6%B4%9B%E8%B0%B7/">#洛谷</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/09/10/P2467/" target="_self">
+          P2467 [SDOI2010] 地精部落
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/09/10/P2467/" target="_self">
+        <div>
+          讨论板中提到了一种冷门 DP trick——连续段 DP，看了一下本题还没有相关的题解，写一篇权当补充。 感谢 @Richard_Whr 提到这种 DP。 感谢 @Charlie_ljk 提供的代码参考。 连续段 DP 这是一种 DP 思想，一般作用在有关排列的 DP 题上。常常会在考虑前 iii 个元素的基础上记录现在存在 jjj 个合法的连续段，每次转移考虑合并连续段并使其保持合法状态，最终查
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-09-10 21:50" pubdate>
+              2024-09-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
+            
+              <a href="/tags/%E6%B4%9B%E8%B0%B7/">#洛谷</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/CF1975F/" target="_self">
+          CF1975F Set
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/CF1975F/" target="_self">
+        <div>
+          好题！于是写一篇题解记录一下。 乍一看无论怎么做时间复杂度都是 O(22n)\mathcal{O}(2^{2n})O(22n) 的，于是我们考虑按位处理。 遇事不决，先推式子 这里我们钦定读者已经掌握了艾弗森括号。 我们约定大写字母表示集合，小写字母表示其对应的二进制表示。约定映射 f(S)=s,f−1(s)=Sf(S)=s,f^{-1}(s)=Sf(S)=s,f−1(s)=S。 先指出两个显然的
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 17:30" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
+            
+              <a href="/tags/Codeforces/">#Codeforces</a>
+            
+              <a href="/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">#基础算法</a>
+            
+              <a href="/tags/ad-hoc/">#ad-hoc</a>
             
           </div>
         
@@ -507,6 +1090,12 @@ mjx-container[display="true"] + br {
   </div>
 
 
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
 
 
 
