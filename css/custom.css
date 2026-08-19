@@ -116,40 +116,91 @@
 }
 
 /* ====================================================
-   文章加密纯净控件美化 (绝不影响解密后的正文排版)
+   文章加密控件全面重构（精准击杀 .hbe-input 灰底与重叠）
    ==================================================== */
 
-.hbe-wrap {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin: 3.5rem auto 2rem auto !important;
-  max-width: 480px !important;
-  text-align: center !important;
+/* 1. 彻底清除插件所有容器的灰色背景与死板高度 */
+#hexo-blog-encrypt,
+.hbe,
+.hbe-container,
+.hbe-content,
+.hbe-input,
+.hbe-input-default,
+.hbe-input-container {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
 }
 
-.hbe-text {
+/* 2. 居中排列容器 */
+.hbe-content,
+.hbe-input,
+.hbe-input-container {
+  display: flex !important;
+  flex-direction: column-reverse !important; /* 提示词置于输入框上方 */
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 480px !important;
+  margin: 3.5rem auto 1.5rem auto !important;
+}
+
+/* 彻底隐藏自带的底部装饰线与伪元素 */
+.bottom-line,
+.hbe-input::before,
+.hbe-input::after,
+.hbe-input-container::before,
+.hbe-input-container::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* 3. 提示文字 (Message)：居中、正常行高、绝不出框 */
+.hbe-input-label,
+.hbe-input-label-default,
+.hbe-input-label-content,
+label[for="hbePass"],
+#hexo-blog-encrypt label {
+  position: static !important;
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
   font-size: 15px !important;
   font-weight: 500 !important;
   line-height: 1.6 !important;
+  margin: 0 0 1.2rem 0 !important;
   color: #cbd5e1 !important;
-  margin-bottom: 1.5rem !important;
+  background: transparent !important;
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
-[data-user-color-scheme='light'] .hbe-text {
+[data-user-color-scheme='light'] .hbe-input-label,
+[data-user-color-scheme='light'] .hbe-input-label-default,
+[data-user-color-scheme='light'] .hbe-input-label-content,
+[data-user-color-scheme='light'] label[for="hbePass"],
+[data-user-color-scheme='light'] #hexo-blog-encrypt label {
   color: #475569 !important;
 }
 
-input#hbePass {
+/* 4. 密码输入框：高质感居中圆角框 */
+input#hbePass,
+.hbe-input-field,
+.hbe-input-field-default {
+  position: static !important;
   display: block !important;
   width: 100% !important;
   max-width: 320px !important;
   height: 46px !important;
   padding: 0 16px !important;
-  margin: 0 auto 1.5rem auto !important;
+  margin: 0 auto !important;
   text-align: center !important;
-  font-size: 16px !important;
+  font-size: 15px !important;
   border-radius: 12px !important;
   background-color: rgba(255, 255, 255, 0.08) !important;
   border: 1px solid rgba(255, 255, 255, 0.15) !important;
@@ -157,24 +208,32 @@ input#hbePass {
   outline: none !important;
   box-sizing: border-box !important;
   transition: all 0.25s ease !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
-[data-user-color-scheme='light'] input#hbePass {
+[data-user-color-scheme='light'] input#hbePass,
+[data-user-color-scheme='light'] .hbe-input-field,
+[data-user-color-scheme='light'] .hbe-input-field-default {
   background-color: rgba(0, 0, 0, 0.04) !important;
   border: 1px solid rgba(0, 0, 0, 0.15) !important;
   color: #2c3e50 !important;
 }
 
-input#hbePass:focus {
+input#hbePass:focus,
+.hbe-input-field:focus {
   border-color: #0071e3 !important;
   box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.25) !important;
 }
 
-button.hbe-btn {
+/* 5. 确定按钮：Apple 胶囊按钮 */
+button.hbe-button,
+button.hbe-btn,
+#hexo-blog-encrypt button {
   display: block !important;
   width: 130px !important;
   height: 42px !important;
-  margin: 0 auto !important;
+  margin: 1.5rem auto 0 auto !important;
   border-radius: 12px !important;
   background: linear-gradient(135deg, #0071e3, #0077ed) !important;
   color: #ffffff !important;
@@ -186,11 +245,14 @@ button.hbe-btn {
   transition: all 0.2s ease !important;
 }
 
-button.hbe-btn:hover {
+button.hbe-button:hover,
+button.hbe-btn:hover,
+#hexo-blog-encrypt button:hover {
   transform: translateY(-1px) !important;
   box-shadow: 0 6px 18px rgba(0, 113, 227, 0.45) !important;
 }
 
+/* 6. 错误提示框（达咩！） */
 .hbe-alert {
   display: none !important;
 }

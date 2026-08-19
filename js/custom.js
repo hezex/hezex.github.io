@@ -1,24 +1,19 @@
-// 解密后精准扫描 #board 容器并重建右侧目录
-function initDecryptedToc() {
+// 监听解密事件：必须先 destroy 销毁空目录实例，再调用 Fluid 重建目录
+function reloadFluidToc() {
   if (window.tocbot) {
-    window.tocbot.init({
-      tocSelector: '#tocbot',
-      contentSelector: '#board',
-      headingSelector: 'h1, h2, h3, h4, h5, h6',
-      linkClass: 'tocbot-link',
-      activeLinkClass: 'tocbot-active-link',
-      listClass: 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth: true,
-      includeTitleTags: true
-    });
+    try {
+      window.tocbot.destroy(); // 关键：必须先销毁初始加载时的空目录！
+    } catch (e) {}
+
+    if (window.Fluid && window.Fluid.plugins && window.Fluid.plugins.initTocBot) {
+      window.Fluid.plugins.initTocBot(); // 重新扫描解密后的正文标题生成目录
+    }
   }
 }
 
 window.addEventListener('hexo-blog-decrypt', function() {
-  setTimeout(initDecryptedToc, 100);
+  setTimeout(reloadFluidToc, 100);
 });
 document.addEventListener('hexo-blog-decrypt', function() {
-  setTimeout(initDecryptedToc, 100);
+  setTimeout(reloadFluidToc, 100);
 });
